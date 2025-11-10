@@ -46,4 +46,5 @@ jobs:
       - name: 'K8S Object Deployment'
         run: |
           kubectl cluster-info
-          kubectl get nodes
+          kubectl apply -f k8s/lab8-deployment.yaml
+          kubectl apply -f k8s/lab8-loadbal.yaml
