@@ -30,12 +30,12 @@ jobs:
       - uses: 'google-github-actions/auth@v3'
         with:
           project_id: 'as-2025-26'
-          workload_identity_provider: 'projects/888836629713/locations/global/workloadIdentityPools/lab8-pool/providers/github-actions-provider'
-   #       service_account: 'as-lab8-2025@as-2025-26.iam.gserviceaccount.com'
+          workload_identity_provider: 'projects/888836629713/locations/global/workloadIdentityPools/as-lab8/providers/github-actions-provider'
+          service_account: 'as-lab8-servaccount@as-2025-26.iam.gserviceaccount.com'
 
-#      - uses: "google-github-actions/setup-gcloud@v2"
- #       with:
-#          install_components: "gke-gcloud-auth-plugin"
+      - uses: "google-github-actions/setup-gcloud@v2"
+        with:
+          install_components: "gke-gcloud-auth-plugin"
 
       - name: "Get GKE credentials"
         uses: 'google-github-actions/get-gke-credentials@v3'
