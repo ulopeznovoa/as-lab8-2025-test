@@ -31,6 +31,7 @@ jobs:
         with:
           project_id: 'as-2025-26'
           workload_identity_provider: 'projects/888836629713/locations/global/workloadIdentityPools/lab8-pool/providers/github-actions-provider'
+          service_account: 'as-lab8-2025@as-2025-26.iam.gserviceaccount.com'
 
 #      - uses: "google-github-actions/setup-gcloud@v2"
  #       with:
