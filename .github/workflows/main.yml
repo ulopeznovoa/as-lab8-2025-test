@@ -5,6 +5,11 @@ on: [push]
 jobs:
   lab8:
     runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+  
     steps:
       - name: Get code
         uses: actions/checkout@v5
