@@ -31,3 +31,18 @@ jobs:
         with:
           project_id: 'as-2025-26'
           workload_identity_provider: 'projects/888836629713/locations/global/workloadIdentityPools/lab8-pool/providers/github-actions-provider'
+
+      - uses: "google-github-actions/setup-gcloud@v2"
+        with:
+          install_components: "gke-gcloud-auth-plugin"
+
+      - name: "Get GKE credentials"
+        uses: 'google-github-actions/get-gke-credentials@v2'
+        with:
+          cluster_name: 'as-lab8-cluster'
+          location: 'us-south1'
+
+      - name: 'K8S Object Deployment'
+        run: |
+          kubectl cluster-info
+          kubectl get nodes
